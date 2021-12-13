@@ -1,14 +1,14 @@
 {
-  "name": "my-solo-core",
+  "name": "plugin-folder-name",
   "version": "1.0.0",
-  "description": "My Solo 401K Custom functionalities.",
+  "description": "Plugin Description.",
   "main": "Gruntfile.js",
   "scripts": {
     "start": "grunt default",
     "readme": "grunt readme",
     "i18n": "grunt i18n"
   },
-  "author": "BuddyBoss",
+  "author": "Bunty",
   "dependencies": {
     "grunt": "^1.3.0",
     "grunt-wp-i18n": "^1.0.3"
