@@ -9,7 +9,7 @@ module.exports = function( grunt ) {
 
 		addtextdomain: {
 			options: {
-				textdomain: 'ms-core',
+				textdomain: 'plugin-text-domain(change)',
 			},
 			update_all_domains: {
 				options: {
@@ -24,8 +24,8 @@ module.exports = function( grunt ) {
 				options: {
 					domainPath: '/languages',
 					exclude: [ '\.git/*', 'bin/*', 'node_modules/*', 'tests/*' ],
-					mainFile: 'my-solo-core.php',
-					potFilename: 'ms-core.pot',
+					mainFile: 'plugin-main-file.php',
+					potFilename: 'plugin.pot',
 					potHeaders: {
 						poedit: true,
 						'x-poedit-keywordslist': true
