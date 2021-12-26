@@ -21,5 +21,4 @@ Automation includes following:
 4. Now, go to plugin root folder where you put these two files.
 5. run `npm install`
 6. run `npm start` ( to run one time )
-7. run `npm watch` ( to watch events while developing. It will create minify JS & CSS )
-
+7. run `grunt watch` ( to watch events while developing. It will create minify JS & CSS )
