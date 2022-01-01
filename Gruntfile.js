@@ -65,11 +65,22 @@ module.exports = function( grunt ) {
 		    }]
 		  }
 		},
+		
+		phpcbf: {
+			options: {
+				bin: '~/phpcs/bin/phpcbf',
+				standard: 'WordPress',
+				noPatch: false,
+			},
+			application: {
+				src: ['**/*.php', '!node_modules/**/*', '!tests/**/*'],
+			}
+		},
 
 		watch: {
 		  scripts: {
 		    files: ['**/*.js', '**/*.css'],
-		    tasks: ['addtextdomain', 'makepot', 'cssmin', 'uglify'],
+		    tasks: ['addtextdomain', 'makepot', 'cssmin', 'uglify', 'phpcbf'],
 		    options: {
 		      spawn: false,
 		    },
@@ -77,7 +88,8 @@ module.exports = function( grunt ) {
 		},
 
 	} );
-
+	
+	grunt.loadNpmTasks( 'grunt-phpcbf' );
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	//grunt.loadNpmTasks( 'grunt-wp-readme-to-markdown' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
